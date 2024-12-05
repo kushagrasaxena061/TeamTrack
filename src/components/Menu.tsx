@@ -14,13 +14,13 @@ const menuItems = [
       },
       {
         icon: "/teacher.png",
-        label: "Teachers",
+        label: "HRs",
         href: "/list/teachers",
         visible: ["admin", "teacher"],
       },
       {
         icon: "/student.png",
-        label: "Students",
+        label: "Employees",
         href: "/list/students",
         visible: ["admin", "teacher"],
       },
@@ -54,18 +54,18 @@ const menuItems = [
         href: "/list/exams",
         visible: ["admin", "teacher", "student", "parent"],
       },
-      {
-        icon: "/assignment.png",
-        label: "Assignments",
-        href: "/list/assignments",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-      {
-        icon: "/result.png",
-        label: "Results",
-        href: "/list/results",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
+      // {
+      //   icon: "/assignment.png",
+      //   label: "Assignments",
+      //   href: "/list/assignments",
+      //   visible: ["admin", "teacher", "student", "parent"],
+      // },
+      // {
+      //   icon: "/result.png",
+      //   label: "Results",
+      //   href: "/list/results",
+      //   visible: ["admin", "teacher", "student", "parent"],
+      // },
       {
         icon: "/attendance.png",
         label: "Attendance",
@@ -78,12 +78,7 @@ const menuItems = [
         href: "/list/events",
         visible: ["admin", "teacher", "student", "parent"],
       },
-      {
-        icon: "/message.png",
-        label: "Messages",
-        href: "/list/messages",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
+ 
       {
         icon: "/announcement.png",
         label: "Announcements",
@@ -92,29 +87,29 @@ const menuItems = [
       },
     ],
   },
-  {
-    title: "OTHER",
-    items: [
-      {
-        icon: "/profile.png",
-        label: "Profile",
-        href: "/profile",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-      {
-        icon: "/setting.png",
-        label: "Settings",
-        href: "/settings",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-      {
-        icon: "/logout.png",
-        label: "Logout",
-        href: "/logout",
-        visible: ["admin", "teacher", "student", "parent"],
-      },
-    ],
-  },
+  // {
+  //   title: "OTHER",
+  //   items: [
+  //     {
+  //       icon: "/profile.png",
+  //       label: "Profile",
+  //       href: "/profile",
+  //       visible: ["admin", "teacher", "student", "parent"],
+  //     },
+  //     {
+  //       icon: "/setting.png",
+  //       label: "Settings",
+  //       href: "/settings",
+  //       visible: ["admin", "teacher", "student", "parent"],
+  //     },
+  //     {
+  //       icon: "/logout.png",
+  //       label: "Logout",
+  //       href: "/logout",
+  //       visible: ["admin", "teacher", "student", "parent"],
+  //     },
+  //   ],
+  // },
 ];
 
 const Menu = async () => {

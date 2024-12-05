@@ -2,17 +2,17 @@ import { Day, PrismaClient, UserSex } from "@prisma/client";
 const prisma = new PrismaClient();
 
 async function main() {
-  // ADMIN
+  // ADMIN = HR
   await prisma.admin.create({
     data: {
       id: "admin1",
-      username: "admin1",
+      username: "HR1",
     },
   });
   await prisma.admin.create({
     data: {
       id: "admin2",
-      username: "admin2",
+      username: "HR2",
     },
   });
 
@@ -25,44 +25,44 @@ async function main() {
     });
   }
 
-  // CLASS
+  // CLASS = MEETING = REMOVE
   for (let i = 1; i <= 6; i++) {
     await prisma.class.create({
       data: {
-        name: `${i}A`, 
+        name: `${i}`, 
         gradeId: i, 
         capacity: Math.floor(Math.random() * (20 - 15 + 1)) + 15,
       },
     });
   }
 
-  // SUBJECT
+  // SUBJECT = DEPARTMENT
   const subjectData = [
-    { name: "Mathematics" },
-    { name: "Science" },
-    { name: "English" },
-    { name: "History" },
-    { name: "Geography" },
-    { name: "Physics" },
-    { name: "Chemistry" },
-    { name: "Biology" },
-    { name: "Computer Science" },
-    { name: "Art" },
+    { name: "Development" },
+    { name: "Human Resource" },
+    { name: "Sales" },
+    { name: "Production" },
+    { name: "Research" },
+    { name: "Management" },
+    { name: "Recuirtment" },
+    { name: "Customer Service" },
+    { name: "Training" },
+    { name: "Operations" },
   ];
 
   for (const subject of subjectData) {
     await prisma.subject.create({ data: subject });
   }
 
-  // TEACHER
+  // TEACHER = HR
   for (let i = 1; i <= 15; i++) {
     await prisma.teacher.create({
       data: {
         id: `teacher${i}`, // Unique ID for the teacher
-        username: `teacher${i}`,
-        name: `TName${i}`,
-        surname: `TSurname${i}`,
-        email: `teacher${i}@example.com`,
+        username: `HR${i}`,
+        name: `HR${i}`,
+        surname: `HR Surname${i}`,
+        email: `HR${i}@example.com`,
         phone: `123-456-789${i}`,
         address: `Address${i}`,
         bloodType: "A+",
@@ -74,7 +74,7 @@ async function main() {
     });
   }
 
-  // LESSON
+  // LESSON = TEAMS
   for (let i = 1; i <= 30; i++) {
     await prisma.lesson.create({
       data: {
@@ -93,7 +93,7 @@ async function main() {
     });
   }
 
-  // PARENT
+  // PARENT = REMOVE
   for (let i = 1; i <= 25; i++) {
     await prisma.parent.create({
       data: {
@@ -108,15 +108,15 @@ async function main() {
     });
   }
 
-  // STUDENT
+  // STUDENT = EMPLOYEE
   for (let i = 1; i <= 50; i++) {
     await prisma.student.create({
       data: {
         id: `student${i}`, 
-        username: `student${i}`, 
-        name: `SName${i}`,
-        surname: `SSurname ${i}`,
-        email: `student${i}@example.com`,
+        username: `employee${i}`, 
+        name: `EName${i}`,
+        surname: `ESurname ${i}`,
+        email: `employee${i}@example.com`,
         phone: `987-654-321${i}`,
         address: `Address${i}`,
         bloodType: "O-",
@@ -129,7 +129,7 @@ async function main() {
     });
   }
 
-  // EXAM
+  // EXAM = 
   for (let i = 1; i <= 10; i++) {
     await prisma.exam.create({
       data: {
@@ -153,7 +153,7 @@ async function main() {
     });
   }
 
-  // RESULT
+  // RESULT = REMOVE
   for (let i = 1; i <= 10; i++) {
     await prisma.result.create({
       data: {
