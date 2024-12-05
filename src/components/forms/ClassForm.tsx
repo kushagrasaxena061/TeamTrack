@@ -69,12 +69,12 @@ const ClassForm = ({
   return (
     <form className="flex flex-col gap-8" onSubmit={onSubmit}>
       <h1 className="text-xl font-semibold">
-        {type === "create" ? "Create a new class" : "Update the class"}
+        {type === "create" ? "Create a new meeting" : "Update the meeting"}
       </h1>
 
       <div className="flex justify-between flex-wrap gap-4">
         <InputField
-          label="Class name"
+          label="Meeting purpose"
           name="name"
           defaultValue={data?.name}
           register={register}
@@ -123,7 +123,7 @@ const ClassForm = ({
           )}
         </div>
         <div className="flex flex-col gap-2 w-full md:w-1/4">
-          <label className="text-xs text-gray-500">Grade</label>
+          <label className="text-xs text-gray-500">Duration (in hrs)</label>
           <select
             className="ring-[1.5px] ring-gray-300 p-2 rounded-md text-sm w-full"
             {...register("gradeId")}

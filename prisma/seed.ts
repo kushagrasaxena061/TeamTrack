@@ -78,7 +78,7 @@ async function main() {
   for (let i = 1; i <= 30; i++) {
     await prisma.lesson.create({
       data: {
-        name: `Lesson${i}`, 
+        name: `Meeting${i}`, 
         day: Day[
           Object.keys(Day)[
             Math.floor(Math.random() * Object.keys(Day).length)
@@ -98,10 +98,10 @@ async function main() {
     await prisma.parent.create({
       data: {
         id: `parentId${i}`,
-        username: `parentId${i}`,
-        name: `PName ${i}`,
-        surname: `PSurname ${i}`,
-        email: `parent${i}@example.com`,
+        username: `internId${i}`,
+        name: `IName ${i}`,
+        surname: `ISurname ${i}`,
+        email: `intern${i}@example.com`,
         phone: `123-456-789${i}`,
         address: `Address${i}`,
       },

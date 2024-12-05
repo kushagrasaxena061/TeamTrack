@@ -129,7 +129,7 @@ const SingleStudentPage = async ({
                 <h1 className="text-xl font-semibold">
                   {student.class._count.lessons}
                 </h1>
-                <span className="text-sm text-gray-400">Lessons</span>
+                <span className="text-sm text-gray-400">Teams</span>
               </div>
             </div>
             {/* CARD */}
@@ -143,20 +143,20 @@ const SingleStudentPage = async ({
               />
               <div className="">
                 <h1 className="text-xl font-semibold">{student.class.name}</h1>
-                <span className="text-sm text-gray-400">Class</span>
+                <span className="text-sm text-gray-400">Meetings</span>
               </div>
             </div>
           </div>
         </div>
         {/* BOTTOM */}
         <div className="mt-4 bg-white rounded-md p-4 h-[800px]">
-          <h1>Student&apos;s Schedule</h1>
+          <h1>Employees&apos;s Schedule</h1>
           <BigCalendarContainer type="classId" id={student.class.id} />
         </div>
       </div>
       {/* RIGHT */}
       <div className="w-full xl:w-1/3 flex flex-col gap-4">
-        <div className="bg-white p-4 rounded-md">
+        {/* <div className="bg-white p-4 rounded-md">
           <h1 className="text-xl font-semibold">Shortcuts</h1>
           <div className="mt-4 flex gap-4 flex-wrap text-xs text-gray-500">
             <Link
@@ -190,10 +190,11 @@ const SingleStudentPage = async ({
               Student&apos;s Results
             </Link>
           </div>
-        </div>
+        </div> */}
+        
         <Performance />
         <Announcements />
-      </div>
+      </div> 
     </div>
   );
 };
